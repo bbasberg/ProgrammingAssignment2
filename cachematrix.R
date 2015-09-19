@@ -1,6 +1,7 @@
 ## In compute-intensive operations, it’s beneficial to be able to
-## cache time-consuming computations.  If we can reuse the cache the results of the 
-## computation then subsequent requests for the results can be retrieved from the cache, ## assuming the matrix hasn’t changed, rather than recalculated.
+## cache time-consuming calculations.  If we cache the results of the 
+## computation, then subsequent requests for the results can be retrieved from the cache, 
+## assuming the matrix hasn’t changed, rather than it being recalculated.
 
 ## The makeCacheMatrix function creates a special “matrix” object that can cache its 
 ## inverse
