@@ -1,10 +1,11 @@
-## In compute-intensive operations, it’s beneficial to be able to
-## cache time-consuming calculations.  If we cache the results of the 
-## computation, then subsequent requests for the results can be retrieved from the cache, 
-## assuming the matrix hasn’t changed, rather than it being recalculated.
+## In compute-intensive operations such as the inversion of a matrix, it’s
+## beneficial to be able to cache the results of time-consuming calculations. 
+## That way,  subsequent requests for the results can be retrieved from the 
+## cache, assuming the matrix hasn’t changed, rather than recalculated.
 
-## The makeCacheMatrix function creates a special “matrix” object that can cache its 
-## inverse
+
+## The makeCacheMatrix function creates a special “matrix” object that can cache
+## its inverse
 
 makeCacheMatrix <- function(x = matrix()) {
   iv <- NULL
@@ -19,8 +20,8 @@ makeCacheMatrix <- function(x = matrix()) {
 }
 
 
-## The cacheSolve function computes the inverse of a special “matrix” that’s returned
-## by the makeCacheMatrix function
+## The cacheSolve function computes the inverse of a special “matrix” that’s
+## returned by the makeCacheMatrix function
 ## Assume that the matrix supplied is always invertible for this project
 
 cacheSolve <- function(x, ...) {
